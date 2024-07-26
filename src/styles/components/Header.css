@@ -1,25 +1,44 @@
 /* src/styles/components/Header.css */
 header {
   background-color: var(--color-black);
-  color: var(--color-white);
-  padding: 10px 0;
+  padding: 10px 20px;
 }
 
 nav ul {
-  list-style: none;
+  list-style-type: none;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li {
-  margin: 0 15px;
+  margin: 0 10px;
 }
 
 nav ul li a {
   color: var(--color-white);
   text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
+  color: var(--color-orange);
+}
+
+.cart-icon {
+  position: relative;
+}
+
+.cart-icon a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+}
+
+.cart-icon a:hover {
   color: var(--color-orange);
 }

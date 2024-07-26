@@ -4,7 +4,6 @@ import Hero from './Hero';
 import FeaturedMenu from './FeaturedMenu';
 import AboutSection from './AboutSection';
 import TestimonialsSection from './TestimonialsSection';
-import ContactForm from './ContactForm';
 
 const Home = () => {
   return (
