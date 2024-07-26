@@ -6,7 +6,8 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s;
-  background-color: var(--color-white);
+  background-color: var(--color-black);
+  color: var(--color-white);
 }
 
 .menu-section img {
@@ -23,7 +24,7 @@
 
 .menu-section p {
   font-size: 1rem;
-  color: var(--color-black);
+  color: var(--color-white);
   padding: 0 10px 10px;
 }
 

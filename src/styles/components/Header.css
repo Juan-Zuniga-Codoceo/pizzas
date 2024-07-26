@@ -19,3 +19,7 @@ nav ul li a {
   color: var(--color-white);
   text-decoration: none;
 }
+
+nav ul li a:hover {
+  color: var(--color-orange);
+}

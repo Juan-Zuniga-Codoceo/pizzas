@@ -2,12 +2,25 @@
 import React from 'react';
 import Hero from './Hero';
 import FeaturedMenu from './FeaturedMenu';
+import AboutSection from './AboutSection';
+import TestimonialsSection from './TestimonialsSection';
+import ContactForm from './ContactForm';
 
 const Home = () => {
   return (
     <main>
-      <Hero />
-      <FeaturedMenu />
+      <div className="section-dark">
+        <Hero />
+      </div>
+      <div className="section-light">
+        <FeaturedMenu />
+      </div>
+      <div className="section-dark">
+        <AboutSection />
+      </div>
+      <div className="section-light">
+        <TestimonialsSection />
+      </div>
     </main>
   );
 };

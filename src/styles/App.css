@@ -1,6 +1,7 @@
 /* src/styles/App.css */
 :root {
   --color-black: #000000;
+  --color-dark-gray: #1a1a1a;  /* Negro más claro */
   --color-white: #ffffff;
   --color-orange: #ff6347; /* Asegúrate de que este sea el mismo tono de naranja del botón */
 }
@@ -8,8 +9,8 @@
 html, body {
   height: 100%;
   margin: 0;
-  color: var(--color-black);
-  background-color: var(--color-white);
+  color: var(--color-white);
+  background-color: var(--color-black);
   font-family: Arial, sans-serif;
 }
 
@@ -21,4 +22,16 @@ html, body {
 
 main {
   flex: 1;
+}
+
+.section-dark {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 50px 20px;
+}
+
+.section-light {
+  background-color: var(--color-dark-gray);
+  color: var(--color-white);
+  padding: 50px 20px;
 }

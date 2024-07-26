@@ -1,0 +1,52 @@
+/* src/styles/components/MenuItems.css */
+.menu-items-section {
+    padding: 50px 20px;
+    background-color: var(--color-black);
+    text-align: center;
+  }
+  
+  .menu-items-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: var(--color-white);
+  }
+  
+  .menu-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .menu-item {
+    text-align: center;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    background-color: var(--color-black);
+    color: var(--color-white);
+  }
+  
+  .menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .menu-item h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: var(--color-orange);
+  }
+  
+  .menu-item p {
+    font-size: 1rem;
+    color: var(--color-white);
+    padding: 0 10px 10px;
+  }
+  
+  .menu-item:hover {
+    transform: scale(1.05);
+  }
+  

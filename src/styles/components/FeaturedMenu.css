@@ -1,14 +1,12 @@
 /* src/styles/components/FeaturedMenu.css */
 .featured-menu {
-  padding: 50px 20px;
-  background-color: var(--color-white);
   text-align: center;
 }
 
 .featured-menu h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
-  color: var(--color-black);
+  color: var(--color-white);
 }
 
 .menu-sections {
