@@ -1,0 +1,33 @@
+/* src/styles/components/MenuPage.css */
+.menu-page {
+  padding: 50px 20px;
+  background-color: var(--color-white);
+  text-align: center;
+}
+
+.menu-page h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: var(--color-black);
+}
+
+.menu-category {
+  margin-bottom: 30px;
+}
+
+.menu-category h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--color-orange);
+}
+
+.menu-category ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu-category ul li {
+  font-size: 1.2rem;
+  color: var(--color-black);
+  margin-bottom: 5px;
+}

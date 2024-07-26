@@ -1,38 +1,24 @@
-.App {
-  text-align: center;
+/* src/styles/App.css */
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-orange: #ff6347; /* Asegúrate de que este sea el mismo tono de naranja del botón */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html, body {
+  height: 100%;
+  margin: 0;
+  color: var(--color-black);
+  background-color: var(--color-white);
+  font-family: Arial, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#root {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+main {
+  flex: 1;
 }

@@ -1,0 +1,32 @@
+/* src/styles/components/MenuSection.css */
+.menu-section {
+  text-align: center;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+  background-color: var(--color-white);
+}
+
+.menu-section img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.menu-section h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: var(--color-orange);
+}
+
+.menu-section p {
+  font-size: 1rem;
+  color: var(--color-black);
+  padding: 0 10px 10px;
+}
+
+.menu-section:hover {
+  transform: scale(1.05);
+}
