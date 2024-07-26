@@ -1,0 +1,49 @@
+/* src/styles/components/Home.css */
+.section {
+    padding: 30px 20px; /* Reducir el padding */
+    text-align: center;
+  }
+  
+  .section-dark {
+    background-color: var(--color-black);
+    color: var(--color-white);
+  }
+  
+  .section-light {
+    background-color: var(--color-black);
+    color: var(--color-white);
+  }
+  
+  .section-separator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0; /* Reducir el margen */
+  }
+  
+  .section-separator-line {
+    height: 1px;
+    background-color: var(--color-white);
+    flex: 1;
+  }
+  
+  .section-separator-icon {
+    width: 50px;
+    height: 50px;
+    margin: 0 10px; /* Reducir el margen */
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .menu-icon {
+    background-image: url('../../assets/images/menu.png');
+  }
+  
+  .utensils-icon {
+    background-image: url('../../assets/images/utensils.png');
+  }
+  
+  .pizza-icon {
+    background-image: url('../../assets/images/pizza-ico.png');
+  }
+  

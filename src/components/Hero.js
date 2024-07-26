@@ -6,8 +6,8 @@ const Hero = () => {
   return (
     <div className="hero">
       <div className="hero-content">
-        <h1>Welcome to Pizza Restaurant</h1>
-        <p>Delicious pizzas made with love.</p>
+        <h1>Welcome to Our Pizza Restaurant</h1>
+        <p>Delicious pizzas made with the finest ingredients</p>
         <button className="hero-button">Order Now</button>
       </div>
     </div>
