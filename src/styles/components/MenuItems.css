@@ -1,49 +1,53 @@
 /* src/styles/components/MenuItems.css */
 .menu-items-section {
-  padding: 50px 20px;
-  background-color: var(--color-black);
+  padding: 20px;
   text-align: center;
 }
 
 .menu-items-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-  color: var(--color-white);
+  margin-bottom: 20px;
+  color: var(--color-orange);
 }
 
 .menu-items {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: space-around; /* Espacio entre las cards */
+  align-items: center;
+  gap: 20px; /* Espacio entre las cards */
+  flex-wrap: wrap; /* Permitir que las cards se ajusten si la pantalla es pequeña */
 }
 
 .menu-item {
-  text-align: center;
-  margin: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s;
-  background-color: var(--color-black);
+  background-color: var(--color-dark-gray);
   color: var(--color-white);
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: calc(33.33% - 40px); /* Ajustar el ancho de las cards */
+  text-align: center;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column; /* Asegurar que la información esté debajo de la imagen */
+  border: 2px solid var(--color-white); /* Agregar borde blanco */
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
 }
 
 .menu-item img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  border-radius: 8px 8px 0 0;
 }
 
 .menu-item h3 {
-  font-size: 1.5rem;
-  margin: 10px 0;
+  margin: 15px 0 10px 0;
   color: var(--color-orange);
 }
 
 .menu-item p {
-  font-size: 1rem;
-  color: var(--color-white);
-  padding: 0 10px 10px;
+  margin: 0;
 }
 
 .rating {
@@ -55,18 +59,15 @@
 
 .star {
   color: var(--color-orange);
-  margin: 0 2px;
 }
 
 .rating-number {
-  margin-left: 10px;
-  font-size: 1rem;
+  margin-left: 5px;
   color: var(--color-white);
 }
 
 .price {
   font-size: 1.2rem;
-  margin: 10px 0;
   color: var(--color-orange);
 }
 
@@ -78,13 +79,10 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-top: 10px;
   transition: background-color 0.3s ease;
 }
 
 .buy-button:hover {
   background-color: #ff4500;
-}
-
-.menu-item:hover {
-  transform: scale(1.05);
 }

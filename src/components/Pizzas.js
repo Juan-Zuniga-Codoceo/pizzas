@@ -1,8 +1,10 @@
 // src/components/Pizzas.js
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/components/MenuItems.css';
 
 const Pizzas = () => {
+  const [cart, setCart] = useState([]);
+
   const pizzas = [
     {
       id: 1,
@@ -10,7 +12,7 @@ const Pizzas = () => {
       description: 'Classic delight with fresh tomatoes and mozzarella cheese.',
       image: require('../assets/images/pizza1.jpg'),
       rating: 4.5,
-      price: '$12.99',
+      price: 12.99,
     },
     {
       id: 2,
@@ -18,7 +20,7 @@ const Pizzas = () => {
       description: 'Spicy pepperoni with a blend of cheese and tomato sauce.',
       image: require('../assets/images/pizza2.jpg'),
       rating: 4.7,
-      price: '$14.99',
+      price: 14.99,
     },
     {
       id: 3,
@@ -26,7 +28,7 @@ const Pizzas = () => {
       description: 'Loaded with fresh vegetables and a touch of basil.',
       image: require('../assets/images/pizza3.jpg'),
       rating: 4.3,
-      price: '$13.99',
+      price: 13.99,
     },
   ];
 
@@ -46,6 +48,11 @@ const Pizzas = () => {
     return stars;
   };
 
+  const addToCart = (pizza) => {
+    setCart([...cart, pizza]);
+    alert(`${pizza.name} added to cart`);
+  };
+
   return (
     <section className="menu-items-section">
       <h2>Pizzas</h2>
@@ -59,8 +66,8 @@ const Pizzas = () => {
               {renderStars(pizza.rating)}
               <span className="rating-number">{pizza.rating}</span>
             </div>
-            <p className="price">{pizza.price}</p>
-            <button className="buy-button">Buy Now</button>
+            <p className="price">${pizza.price.toFixed(2)}</p>
+            <button className="buy-button" onClick={() => addToCart(pizza)}>Add to Cart</button>
           </div>
         ))}
       </div>
