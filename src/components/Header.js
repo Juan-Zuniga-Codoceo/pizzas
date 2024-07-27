@@ -25,11 +25,11 @@ const Header = ({ cartItems, onRemoveFromCart }) => {
           <li><Link to="/reservations">Reservations</Link></li>
           <li><Link to="/contact">Contact</Link></li>
           <li><Link to="/delivery">Delivery</Link></li>
-          <li className="cart-icon" onClick={handleCartClick}>
-            <FaShoppingCart size={24} />
-            {cartItems.length > 0 && <span className="cart-count">{cartItems.length}</span>}
-          </li>
         </ul>
+        <div className="cart-icon" onClick={handleCartClick}>
+          <FaShoppingCart size={24} />
+          {cartItems.length > 0 && <span className="cart-count">{cartItems.length}</span>}
+        </div>
       </nav>
       {isCartOpen && <CartPopup items={cartItems} onClose={handleCloseCart} onRemoveFromCart={onRemoveFromCart} />}
     </header>

@@ -6,19 +6,29 @@ header {
   width: 100%;
   z-index: 1000;
   top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 nav ul {
   list-style-type: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   margin: 0;
   padding: 0;
 }
 
 nav ul li {
-  margin: 0 10px;
+  margin: 0 15px; /* Ajuste el espacio entre los elementos */
 }
 
 nav ul li a {
@@ -33,7 +43,11 @@ nav ul li a:hover {
 }
 
 .cart-icon {
-  position: relative;
+  position: absolute;
+  top: 15px;
+  right: 70px; /* Ajuste para que no esté tan pegado a la esquina */
+  display: flex;
+  align-items: center;
   cursor: pointer;
 }
 
