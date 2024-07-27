@@ -1,16 +1,17 @@
 // src/components/Pizzas.js
-import React, { useState } from 'react';
+import React from 'react';
+import pizza1 from '../assets/images/pizza1.jpg';
+import pizza2 from '../assets/images/pizza2.jpg';
+import pizza3 from '../assets/images/pizza3.jpg';
 import '../styles/components/MenuItems.css';
 
-const Pizzas = () => {
-  const [cart, setCart] = useState([]);
-
+const Pizzas = ({ handleAddToCart }) => {
   const pizzas = [
     {
       id: 1,
       name: 'Margherita',
       description: 'Classic delight with fresh tomatoes and mozzarella cheese.',
-      image: require('../assets/images/pizza1.jpg'),
+      image: pizza1,
       rating: 4.5,
       price: 12.99,
     },
@@ -18,7 +19,7 @@ const Pizzas = () => {
       id: 2,
       name: 'Pepperoni',
       description: 'Spicy pepperoni with a blend of cheese and tomato sauce.',
-      image: require('../assets/images/pizza2.jpg'),
+      image: pizza2,
       rating: 4.7,
       price: 14.99,
     },
@@ -26,7 +27,7 @@ const Pizzas = () => {
       id: 3,
       name: 'Veggie',
       description: 'Loaded with fresh vegetables and a touch of basil.',
-      image: require('../assets/images/pizza3.jpg'),
+      image: pizza3,
       rating: 4.3,
       price: 13.99,
     },
@@ -48,11 +49,6 @@ const Pizzas = () => {
     return stars;
   };
 
-  const addToCart = (pizza) => {
-    setCart([...cart, pizza]);
-    alert(`${pizza.name} added to cart`);
-  };
-
   return (
     <section className="menu-items-section">
       <h2>Pizzas</h2>
@@ -67,7 +63,7 @@ const Pizzas = () => {
               <span className="rating-number">{pizza.rating}</span>
             </div>
             <p className="price">${pizza.price.toFixed(2)}</p>
-            <button className="buy-button" onClick={() => addToCart(pizza)}>Add to Cart</button>
+            <button className="buy-button" onClick={() => handleAddToCart(pizza)}>Buy Now</button>
           </div>
         ))}
       </div>
