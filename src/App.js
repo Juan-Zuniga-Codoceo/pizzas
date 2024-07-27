@@ -11,14 +11,16 @@ import Drinks from './components/Drinks';
 import Reservations from './components/Reservations';
 import Orders from './components/Orders';
 import Contact from './components/Contact';
-import Delivery from './components/Delivery';  // Importar el componente Delivery
+import Delivery from './components/Delivery';
 import './styles/App.css';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
+  const [alertVisible, setAlertVisible] = useState(false);
 
   const handleAddToCart = (item) => {
     setCartItems([...cartItems, item]);
+    showAlert();
   };
 
   const handleRemoveFromCart = (index) => {
@@ -32,6 +34,13 @@ function App() {
     setCartItems([]);
   };
 
+  const showAlert = () => {
+    setAlertVisible(true);
+    setTimeout(() => {
+      setAlertVisible(false);
+    }, 3000); // El mensaje desaparecerá después de 3 segundos
+  };
+
   return (
     <Router>
       <div id="root">
@@ -40,6 +49,7 @@ function App() {
           handleRemoveFromCart={handleRemoveFromCart}
           handleSubmitOrder={handleSubmitOrder}
         />
+        {alertVisible && <div className="alert">Producto agregado al carrito</div>}
         <main>
           <Routes>
             <Route exact path="/" element={<Home />} />
@@ -50,7 +60,7 @@ function App() {
             <Route path="/reservations" element={<Reservations />} />
             <Route path="/orders" element={<Orders />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/delivery" element={<Delivery />} /> {/* Agregar la ruta para Delivery */}
+            <Route path="/delivery" element={<Delivery />} />
           </Routes>
         </main>
         <Footer />
