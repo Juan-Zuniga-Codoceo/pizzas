@@ -2,7 +2,7 @@
 import React from 'react';
 import '../styles/components/CartPopup.css';
 
-const CartPopup = ({ items, onRemoveFromCart, onClose, onSubmit }) => {
+const CartPopup = ({ items, onClose, onRemoveFromCart, onSubmit }) => {
   const total = items.reduce((sum, item) => sum + item.price, 0);
 
   return (

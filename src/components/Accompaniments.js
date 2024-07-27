@@ -5,7 +5,7 @@ import accompaniments2 from '../assets/images/accompaniments2.jpg';
 import accompaniments3 from '../assets/images/accompaniments3.jpg';
 import '../styles/components/MenuItems.css';
 
-const Accompaniments = ({ handleAddToCart }) => {
+const Accompaniments = ({ onAddToCart }) => {
   const accompaniments = [
     {
       id: 1,
@@ -63,7 +63,7 @@ const Accompaniments = ({ handleAddToCart }) => {
               <span className="rating-number">{item.rating}</span>
             </div>
             <p className="price">${item.price.toFixed(2)}</p>
-            <button className="buy-button" onClick={() => handleAddToCart(item)}>Buy Now</button>
+            <button className="buy-button" onClick={() => onAddToCart(item)}>Buy Now</button>
           </div>
         ))}
       </div>

@@ -10,57 +10,41 @@ import Accompaniments from './components/Accompaniments';
 import Drinks from './components/Drinks';
 import Reservations from './components/Reservations';
 import Orders from './components/Orders';
-import Contact from './components/Contact';
 import Delivery from './components/Delivery';
+import Contact from './components/Contact';
 import './styles/App.css';
 
 function App() {
   const [cartItems, setCartItems] = useState([]);
-  const [alertVisible, setAlertVisible] = useState(false);
 
   const handleAddToCart = (item) => {
     setCartItems([...cartItems, item]);
-    showAlert();
   };
 
   const handleRemoveFromCart = (index) => {
-    const newCartItems = [...cartItems];
-    newCartItems.splice(index, 1);
+    const newCartItems = cartItems.filter((_, i) => i !== index);
     setCartItems(newCartItems);
   };
 
   const handleSubmitOrder = () => {
-    alert('Pedido confirmado');
     setCartItems([]);
-  };
-
-  const showAlert = () => {
-    setAlertVisible(true);
-    setTimeout(() => {
-      setAlertVisible(false);
-    }, 3000);
   };
 
   return (
     <Router>
       <div id="root">
-        <Header
-          cartItems={cartItems}
-          handleRemoveFromCart={handleRemoveFromCart}
-          handleSubmitOrder={handleSubmitOrder}
-        />
-        {alertVisible && <div className="alert">Producto agregado al carrito</div>}
+        <Header cartItems={cartItems} onRemoveFromCart={handleRemoveFromCart} />
         <main>
           <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route path="/menu" element={<MenuPage />} />
-            <Route path="/menu/pizzas" element={<Pizzas handleAddToCart={handleAddToCart} />} />
-            <Route path="/menu/accompaniments" element={<Accompaniments handleAddToCart={handleAddToCart} />} />
-            <Route path="/menu/drinks" element={<Drinks handleAddToCart={handleAddToCart} />} />
+            <Route exact path="/" element={<Home onAddToCart={handleAddToCart} />} />
+            <Route path="/menu" element={<MenuPage onAddToCart={handleAddToCart} />} />
+            <Route path="/menu/pizzas" element={<Pizzas onAddToCart={handleAddToCart} />} />
+            <Route path="/menu/accompaniments" element={<Accompaniments onAddToCart={handleAddToCart} />} />
+            <Route path="/menu/drinks" element={<Drinks onAddToCart={handleAddToCart} />} />
             <Route path="/reservations" element={<Reservations />} />
             <Route path="/orders" element={<Orders />} />
+            <Route path="/delivery" element={<Delivery cartItems={cartItems} onRemoveFromCart={handleRemoveFromCart} handleSubmitOrder={handleSubmitOrder} />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/delivery" element={<Delivery cartItems={cartItems} handleRemoveFromCart={handleRemoveFromCart} handleSubmitOrder={handleSubmitOrder} />} />
           </Routes>
         </main>
         <Footer />

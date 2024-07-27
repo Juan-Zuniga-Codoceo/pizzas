@@ -5,7 +5,7 @@ import drink2 from '../assets/images/drink2.jpg';
 import drink3 from '../assets/images/drink3.jpg';
 import '../styles/components/MenuItems.css';
 
-const Drinks = ({ handleAddToCart }) => {
+const Drinks = ({ onAddToCart }) => {
   const drinks = [
     {
       id: 1,
@@ -63,7 +63,7 @@ const Drinks = ({ handleAddToCart }) => {
               <span className="rating-number">{drink.rating}</span>
             </div>
             <p className="price">${drink.price.toFixed(2)}</p>
-            <button className="buy-button" onClick={() => handleAddToCart(drink)}>Buy Now</button>
+            <button className="buy-button" onClick={() => onAddToCart(drink)}>Buy Now</button>
           </div>
         ))}
       </div>

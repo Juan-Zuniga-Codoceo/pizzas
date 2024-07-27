@@ -5,7 +5,7 @@ import creditCard from '../assets/images/credit-card.png';
 import debitCard from '../assets/images/debit-card.png';
 import cash from '../assets/images/cash.png';
 
-const Delivery = ({ cartItems, handleRemoveFromCart, handleSubmitOrder }) => {
+const Delivery = ({ cartItems, onRemoveFromCart, handleSubmitOrder }) => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [address, setAddress] = useState('');
@@ -102,7 +102,7 @@ const Delivery = ({ cartItems, handleRemoveFromCart, handleSubmitOrder }) => {
             {cartItems.map((item, index) => (
               <li key={index}>
                 <span>{item.name} - ${item.price.toFixed(2)}</span>
-                <button onClick={() => handleRemoveFromCart(index)}>Eliminar</button>
+                <button onClick={() => onRemoveFromCart(index)}>Eliminar</button>
               </li>
             ))}
           </ul>

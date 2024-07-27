@@ -1,36 +1,12 @@
 // src/components/Pizzas.js
 import React from 'react';
-import pizza1 from '../assets/images/pizza1.jpg';
-import pizza2 from '../assets/images/pizza2.jpg';
-import pizza3 from '../assets/images/pizza3.jpg';
 import '../styles/components/MenuItems.css';
 
-const Pizzas = ({ handleAddToCart }) => {
+const Pizzas = ({ onAddToCart }) => {
   const pizzas = [
-    {
-      id: 1,
-      name: 'Margherita',
-      description: 'Classic delight with fresh tomatoes and mozzarella cheese.',
-      image: pizza1,
-      rating: 4.5,
-      price: 12.99,
-    },
-    {
-      id: 2,
-      name: 'Pepperoni',
-      description: 'Spicy pepperoni with a blend of cheese and tomato sauce.',
-      image: pizza2,
-      rating: 4.7,
-      price: 14.99,
-    },
-    {
-      id: 3,
-      name: 'Veggie',
-      description: 'Loaded with fresh vegetables and a touch of basil.',
-      image: pizza3,
-      rating: 4.3,
-      price: 13.99,
-    },
+    { id: 1, name: 'Margherita', description: 'Classic delight with fresh tomatoes and mozzarella cheese.', image: require('../assets/images/pizza1.jpg'), rating: 4.5, price: 12.99 },
+    { id: 2, name: 'Pepperoni', description: 'Spicy pepperoni with a blend of cheese and tomato sauce.', image: require('../assets/images/pizza2.jpg'), rating: 4.7, price: 14.99 },
+    { id: 3, name: 'Veggie', description: 'Loaded with fresh vegetables and a touch of basil.', image: require('../assets/images/pizza3.jpg'), rating: 4.3, price: 13.99 },
   ];
 
   const renderStars = (rating) => {
@@ -63,7 +39,7 @@ const Pizzas = ({ handleAddToCart }) => {
               <span className="rating-number">{pizza.rating}</span>
             </div>
             <p className="price">${pizza.price.toFixed(2)}</p>
-            <button className="buy-button" onClick={() => handleAddToCart(pizza)}>Buy Now</button>
+            <button className="buy-button" onClick={() => onAddToCart(pizza)}>Buy Now</button>
           </div>
         ))}
       </div>

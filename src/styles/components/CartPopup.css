@@ -5,7 +5,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.9); /* Fondo con transparencia */
+  background-color: var(--color-black);
   color: var(--color-white);
   border: 1px solid #ccc;
   border-radius: 8px;
@@ -29,7 +29,6 @@
 .cart-popup li {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   margin-bottom: 10px;
 }
 
@@ -40,10 +39,9 @@
   margin-top: 15px;
 }
 
-.cta-button,
-.close-button {
-  padding: 10px 20px;
-  font-size: 1rem;
+.cta-button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
   background-color: var(--color-orange);
   color: var(--color-white);
   border: none;
@@ -53,7 +51,22 @@
   margin-top: 10px;
 }
 
-.cta-button:hover,
-.close-button:hover {
+.cta-button:hover {
   background-color: #ff4500;
+}
+
+.close-button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #ff4500;
+  color: var(--color-white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.close-button:hover {
+  background-color: #ff0000;
 }

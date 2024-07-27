@@ -1,20 +1,17 @@
 /* src/styles/components/Header.css */
 header {
-  background-color: rgba(0, 0, 0, 0.8); /* Agregar transparencia */
+  background-color: rgba(0, 0, 0, 0.8);
   padding: 10px 20px;
   position: fixed;
   width: 100%;
   z-index: 1000;
-  top: 0; /* Fijar el menú en la parte superior */
-  display: flex;
-  justify-content: center; /* Centrar el contenido del header */
-  align-items: center;
+  top: 0;
 }
 
 nav ul {
   list-style-type: none;
   display: flex;
-  justify-content: center; /* Centrar el menú */
+  justify-content: space-around;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -27,7 +24,7 @@ nav ul li {
 nav ul li a {
   color: var(--color-white);
   text-decoration: none;
-  font-size: 1rem; /* Reducir tamaño de letra */
+  font-size: 1.2rem;
   transition: color 0.3s ease;
 }
 
@@ -36,17 +33,18 @@ nav ul li a:hover {
 }
 
 .cart-icon {
-  position: absolute; /* Posicionar el carrito de forma absoluta */
-  right: 60px; /* Mover el carrito más a la izquierda */
+  position: relative;
+  cursor: pointer;
 }
 
-.cart-icon a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.cart-icon .cart-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: var(--color-orange);
   color: var(--color-white);
-}
-
-.cart-icon a:hover {
-  color: var(--color-orange);
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  font-weight: bold;
 }
