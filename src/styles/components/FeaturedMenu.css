@@ -38,6 +38,7 @@
   -moz-transition: transform 0.3s ease; /* Firefox */
   -o-transition: transform 0.3s ease; /* Opera */
   margin-bottom: 20px; /* Asegurar que haya espacio abajo en caso de ajuste */
+  border: 2px solid var(--color-white); /* Borde blanco */
 }
 
 .menu-section:hover {
