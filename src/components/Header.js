@@ -5,7 +5,7 @@ import { FaShoppingCart } from 'react-icons/fa';
 import CartPopup from './CartPopup';
 import '../styles/components/Header.css';
 
-const Header = ({ cartItems, onRemoveFromCart }) => {
+const Header = ({ cartItems = [], onRemoveFromCart }) => { // Default to an empty array if cartItems is undefined
   const [isCartOpen, setIsCartOpen] = useState(false);
 
   const handleCartClick = () => {
@@ -20,10 +20,10 @@ const Header = ({ cartItems, onRemoveFromCart }) => {
     <header>
       <nav>
         <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/menu">Menu</Link></li>
-          <li><Link to="/reservations">Reservations</Link></li>
-          <li><Link to="/contact">Contact</Link></li>
+          <li><Link to="/">Inicio</Link></li>
+          <li><Link to="/menu">Menú</Link></li>
+          <li><Link to="/reservations">Reservaciones</Link></li>
+          <li><Link to="/contact">Contacto</Link></li>
           <li><Link to="/delivery">Delivery</Link></li>
         </ul>
         <div className="cart-icon" onClick={handleCartClick}>

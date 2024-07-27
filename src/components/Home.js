@@ -4,11 +4,13 @@ import Hero from './Hero';
 import FeaturedMenu from './FeaturedMenu';
 import Gallery from './Gallery';
 import RestaurantHistory from './RestaurantHistory';
+import ScrollTop from './ScrollTop';
 import '../styles/components/Home.css';
 
 const Home = () => {
   return (
     <main>
+      <ScrollTop />
       <div className="section section-dark">
         <Hero />
       </div>
@@ -28,12 +30,14 @@ const Home = () => {
       <div className="section section-dark">
         <div className="cta-section">
           <h2>Reserva una Mesa o Pide a Domicilio</h2>
-          <button className="cta-button" onClick={() => window.location.href='/reservations'}>
-            Reserva Ahora
-          </button>
-          <button className="cta-button" onClick={() => window.location.href='/delivery'}>
-            Ordena Delivery
-          </button>
+          <div className="cta-buttons">
+            <button className="cta-button" onClick={() => window.location.href='/reservations'}>
+              Reserva Ahora
+            </button>
+            <button className="cta-button" onClick={() => window.location.href='/delivery'}>
+              Ordena Delivery
+            </button>
+          </div>
         </div>
       </div>
       <div className="section-separator">

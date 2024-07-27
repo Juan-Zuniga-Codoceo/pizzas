@@ -5,7 +5,7 @@ import '../styles/components/ContactForm.css';
 const ContactForm = () => {
   return (
     <section className="contact-form-section">
-      <h2>Contact Us</h2>
+      <h2>Contáctanos</h2>
       <form className="contact-form">
         <label htmlFor="name">Name</label>
         <input type="text" id="name" name="name" required />

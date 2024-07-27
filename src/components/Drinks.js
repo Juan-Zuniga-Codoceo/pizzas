@@ -10,23 +10,23 @@ const Drinks = ({ onAddToCart }) => {
     {
       id: 1,
       name: 'Coca Cola',
-      description: 'Classic Coca Cola soft drink.',
+      description: 'Refresco clásico de Coca Cola.',
       image: drink1,
       rating: 4.5,
       price: 1.99,
     },
     {
       id: 2,
-      name: 'Orange Juice',
-      description: 'Freshly squeezed orange juice.',
+      name: 'Jugo de Naranja',
+      description: 'Jugo de naranja recién exprimido.',
       image: drink2,
       rating: 4.8,
       price: 2.99,
     },
     {
       id: 3,
-      name: 'Beer',
-      description: 'Cold beer to refresh your day.',
+      name: 'Cerveza',
+      description: 'Cerveza fría para refrescar tu día.',
       image: drink3,
       rating: 4.7,
       price: 3.99,
@@ -51,7 +51,7 @@ const Drinks = ({ onAddToCart }) => {
 
   return (
     <section className="menu-items-section">
-      <h2>Drinks</h2>
+      <h2>Bebidas</h2>
       <div className="menu-items">
         {drinks.map(drink => (
           <div key={drink.id} className="menu-item">
@@ -63,7 +63,7 @@ const Drinks = ({ onAddToCart }) => {
               <span className="rating-number">{drink.rating}</span>
             </div>
             <p className="price">${drink.price.toFixed(2)}</p>
-            <button className="buy-button" onClick={() => onAddToCart(drink)}>Buy Now</button>
+            <button className="buy-button" onClick={() => onAddToCart(drink)}>Comprar Ahora</button>
           </div>
         ))}
       </div>

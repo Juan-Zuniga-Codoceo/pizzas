@@ -9,24 +9,24 @@ const Accompaniments = ({ onAddToCart }) => {
   const accompaniments = [
     {
       id: 1,
-      name: 'Garlic Bread',
-      description: 'Toasted bread with garlic and olive oil.',
+      name: 'Pan de Ajo',
+      description: 'Pan tostado con ajo y aceite de oliva.',
       image: accompaniments1,
       rating: 4.6,
       price: 5.99,
     },
     {
       id: 2,
-      name: 'Chicken Wings',
-      description: 'Crispy chicken wings with a side of sauce.',
+      name: 'Alitas de Pollo',
+      description: 'Crujientes alitas de pollo con salsa a un lado.',
       image: accompaniments2,
       rating: 4.8,
       price: 8.99,
     },
     {
       id: 3,
-      name: 'Salads',
-      description: 'Fresh and healthy salads with a variety of toppings.',
+      name: 'Ensaladas',
+      description: 'Frescas y saludables ensaladas con una variedad de aderezos.',
       image: accompaniments3,
       rating: 4.5,
       price: 6.99,
@@ -51,7 +51,7 @@ const Accompaniments = ({ onAddToCart }) => {
 
   return (
     <section className="menu-items-section">
-      <h2>Accompaniments</h2>
+      <h2>Acompañamientos</h2>
       <div className="menu-items">
         {accompaniments.map(item => (
           <div key={item.id} className="menu-item">
@@ -63,7 +63,7 @@ const Accompaniments = ({ onAddToCart }) => {
               <span className="rating-number">{item.rating}</span>
             </div>
             <p className="price">${item.price.toFixed(2)}</p>
-            <button className="buy-button" onClick={() => onAddToCart(item)}>Buy Now</button>
+            <button className="buy-button" onClick={() => onAddToCart(item)}>Comprar Ahora</button>
           </div>
         ))}
       </div>

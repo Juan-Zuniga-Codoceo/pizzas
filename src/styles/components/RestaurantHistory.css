@@ -1,6 +1,6 @@
 /* src/styles/components/RestaurantHistory.css */
 .history-section {
-  padding: 10px 10px; /* Reducir el padding */
+  padding: -10px 10px; /* Reducir el padding */
   background-color: var(--color-black);
   color: var(--color-white);
   text-align: center;
@@ -9,6 +9,7 @@
 .history-section h2 {
   font-size: 2.5rem;
   margin-bottom: 20px;
+  margin-top: -10px;
 }
 
 .history-section p {

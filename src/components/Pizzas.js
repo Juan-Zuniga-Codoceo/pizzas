@@ -4,9 +4,9 @@ import '../styles/components/MenuItems.css';
 
 const Pizzas = ({ onAddToCart }) => {
   const pizzas = [
-    { id: 1, name: 'Margherita', description: 'Classic delight with fresh tomatoes and mozzarella cheese.', image: require('../assets/images/pizza1.jpg'), rating: 4.5, price: 12.99 },
-    { id: 2, name: 'Pepperoni', description: 'Spicy pepperoni with a blend of cheese and tomato sauce.', image: require('../assets/images/pizza2.jpg'), rating: 4.7, price: 14.99 },
-    { id: 3, name: 'Veggie', description: 'Loaded with fresh vegetables and a touch of basil.', image: require('../assets/images/pizza3.jpg'), rating: 4.3, price: 13.99 },
+    { id: 1, name: 'Margherita', description: 'Delicia clásica con tomates frescos y queso mozzarella.', image: require('../assets/images/pizza1.jpg'), rating: 4.5, price: 12.99 },
+    { id: 2, name: 'Pepperoni', description: 'Pepperoni picante con una mezcla de queso y salsa de tomate.', image: require('../assets/images/pizza2.jpg'), rating: 4.7, price: 14.99 },
+    { id: 3, name: 'Vegetariana', description: 'Cargada con verduras frescas y un toque de albahaca.', image: require('../assets/images/pizza3.jpg'), rating: 4.3, price: 13.99 },
   ];
 
   const renderStars = (rating) => {
@@ -39,7 +39,7 @@ const Pizzas = ({ onAddToCart }) => {
               <span className="rating-number">{pizza.rating}</span>
             </div>
             <p className="price">${pizza.price.toFixed(2)}</p>
-            <button className="buy-button" onClick={() => onAddToCart(pizza)}>Buy Now</button>
+            <button className="buy-button" onClick={() => onAddToCart(pizza)}>Comprar Ahora</button>
           </div>
         ))}
       </div>

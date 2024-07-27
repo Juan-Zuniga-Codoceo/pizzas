@@ -1,14 +1,22 @@
 // src/components/Hero.js
-import React from 'react';
-import '../styles/components/Hero.css';
+import React from "react";
+import "../styles/components/Hero.css";
 
 const Hero = () => {
   return (
     <div className="hero">
       <div className="hero-content">
-        <h1>Welcome to Our Pizza Restaurant</h1>
-        <p>Delicious pizzas made with the finest ingredients</p>
-        <button className="hero-button">Order Now</button>
+        <h1>Nuestra Pizza, Tu Felicidad</h1>
+        <p>Deliciosas pizzas hechas con los mejores ingredientes</p>
+        <p>
+          <em>"¡Sabor que te enamora, calidad que te sorprende!"</em>
+        </p>
+        <button
+          className="hero-button"
+          onClick={() => (window.location.href = "/menu")}
+        >
+          Ordena Ahora
+        </button>
       </div>
     </div>
   );

@@ -1,4 +1,3 @@
-// src/App.js
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
@@ -10,8 +9,9 @@ import Accompaniments from './components/Accompaniments';
 import Drinks from './components/Drinks';
 import Reservations from './components/Reservations';
 import Orders from './components/Orders';
-import Delivery from './components/Delivery';
 import Contact from './components/Contact';
+import Delivery from './components/Delivery';
+import ScrollTop from './components/ScrollTop';
 import './styles/App.css';
 
 function App() {
@@ -22,8 +22,7 @@ function App() {
   };
 
   const handleRemoveFromCart = (index) => {
-    const newCartItems = cartItems.filter((_, i) => i !== index);
-    setCartItems(newCartItems);
+    setCartItems(cartItems.filter((_, i) => i !== index));
   };
 
   const handleSubmitOrder = () => {
@@ -34,17 +33,18 @@ function App() {
     <Router>
       <div id="root">
         <Header cartItems={cartItems} onRemoveFromCart={handleRemoveFromCart} />
+        <ScrollTop />
         <main>
           <Routes>
             <Route exact path="/" element={<Home onAddToCart={handleAddToCart} />} />
-            <Route path="/menu" element={<MenuPage onAddToCart={handleAddToCart} />} />
+            <Route path="/menu" element={<MenuPage />} />
             <Route path="/menu/pizzas" element={<Pizzas onAddToCart={handleAddToCart} />} />
             <Route path="/menu/accompaniments" element={<Accompaniments onAddToCart={handleAddToCart} />} />
             <Route path="/menu/drinks" element={<Drinks onAddToCart={handleAddToCart} />} />
             <Route path="/reservations" element={<Reservations />} />
             <Route path="/orders" element={<Orders />} />
-            <Route path="/delivery" element={<Delivery cartItems={cartItems} onRemoveFromCart={handleRemoveFromCart} handleSubmitOrder={handleSubmitOrder} />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/delivery" element={<Delivery cartItems={cartItems} handleRemoveFromCart={handleRemoveFromCart} handleSubmitOrder={handleSubmitOrder} />} />
           </Routes>
         </main>
         <Footer />

@@ -6,13 +6,13 @@ import '../styles/components/Contact.css';
 const Contact = () => {
   return (
     <div className="contact-page">
-      <h2>Contact Us</h2>
+      <h2>Contáctanos</h2>
       <div className="contact-content">
         <div className="contact-form-container">
           <ContactForm />
         </div>
         <div className="location-section">
-          <h2>Our Location</h2>
+          <h2>Ubicación</h2>
           <div className="map-container">
             <iframe
               title="Restaurant Location"

@@ -1,48 +1,16 @@
 /* src/styles/components/Reservations.css */
 .reservations-section {
-    padding: 50px 20px;
-    background-color: var(--color-black);
-    color: var(--color-white);
-    text-align: center;
-  }
-  
-  .reservations-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  
-  .reservations-form {
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .reservations-form label {
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-  }
-  
-  .reservations-form input {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-  }
-  
-  .reservations-form button {
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    background-color: var(--color-orange);
-    color: var(--color-white);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .reservations-form button:hover {
-    background-color: #ff4500;
-  }
-  
+  padding: 20px;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  text-align: center;
+}
+
+.calendly-container {
+  margin: 20px auto;
+  max-width: 800px;
+  border: 2px solid var(--color-white);
+  border-radius: 8px;
+  overflow: hidden;
+  height: 800px; /* Ajusta la altura del contenedor para que coincida con el iframe */
+}

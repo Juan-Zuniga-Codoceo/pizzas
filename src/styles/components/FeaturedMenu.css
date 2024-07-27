@@ -1,6 +1,6 @@
 /* src/styles/components/FeaturedMenu.css */
 .featured-menu {
-  padding: 20px;
+  padding: -20px;
   text-align: center;
   width: 100%;
   max-width: 1200px; /* Ajusta este valor según sea necesario */
@@ -9,7 +9,7 @@
 
 .featured-menu h2 {
   margin-bottom: 20px;
-  color: var(--color-orange);
+  color: var(--color-white);
 }
 
 .menu-sections {
