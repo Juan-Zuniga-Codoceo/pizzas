@@ -18,3 +18,11 @@
 .scroll-to-top div:hover {
   background-color: var(--color-orange);
 }
+
+
+@media (max-width: 768px) {
+  .scroll-top {
+    bottom: 20px;
+    right: 20px;
+  }
+}

@@ -43,3 +43,23 @@
 .hero-button:hover {
   background-color: #ff4500;
 }
+
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+}

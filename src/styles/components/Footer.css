@@ -48,3 +48,19 @@ footer {
 footer p {
   margin: 0;
 }
+
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-content p {
+    margin: 10px 0;
+  }
+
+  .footer-content .social-icons {
+    margin-top: 10px;
+  }
+}

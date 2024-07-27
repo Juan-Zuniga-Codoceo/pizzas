@@ -173,3 +173,15 @@
     width: 100%;
   }
 }
+
+
+@media (max-width: 768px) {
+  .delivery-content {
+    flex-direction: column;
+  }
+
+  .address-form,
+  .cart-summary {
+    margin-bottom: 20px;
+  }
+}

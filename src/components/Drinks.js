@@ -4,6 +4,7 @@ import drink1 from '../assets/images/drink1.jpg';
 import drink2 from '../assets/images/drink2.jpg';
 import drink3 from '../assets/images/drink3.jpg';
 import '../styles/components/MenuItems.css';
+import '../styles/components/Drinks.css';
 
 const Drinks = ({ onAddToCart }) => {
   const drinks = [

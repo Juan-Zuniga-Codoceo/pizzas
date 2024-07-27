@@ -1,6 +1,7 @@
 // src/components/Pizzas.js
 import React from 'react';
 import '../styles/components/MenuItems.css';
+import '../styles/components/Pizzas.css';
 
 const Pizzas = ({ onAddToCart }) => {
   const pizzas = [

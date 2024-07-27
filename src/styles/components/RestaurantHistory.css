@@ -17,3 +17,18 @@
   line-height: 1.6;
   margin-bottom: 20px;
 }
+
+
+@media (max-width: 768px) {
+  .restaurant-history {
+    padding: 20px;
+  }
+
+  .restaurant-history h2 {
+    font-size: 1.5rem;
+  }
+
+  .restaurant-history p {
+    font-size: 1rem;
+  }
+}

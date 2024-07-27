@@ -86,3 +86,9 @@
 .buy-button:hover {
   background-color: #ff4500;
 }
+
+@media (max-width: 768px) {
+  .menu-items {
+    flex-direction: column;
+  }
+}

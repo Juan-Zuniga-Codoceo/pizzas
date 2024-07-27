@@ -22,3 +22,9 @@
   height: 300px; /* Reducir la altura del carrusel */
   object-fit: cover; /* Asegurar que la imagen se recorte adecuadamente */
 }
+
+@media (max-width: 768px) {
+  .gallery-section {
+    padding: 10px;
+  }
+}

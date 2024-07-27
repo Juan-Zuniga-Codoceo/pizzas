@@ -4,6 +4,7 @@ import accompaniments1 from '../assets/images/accompaniments1.jpg';
 import accompaniments2 from '../assets/images/accompaniments2.jpg';
 import accompaniments3 from '../assets/images/accompaniments3.jpg';
 import '../styles/components/MenuItems.css';
+import '../styles/components/Accompaniments.css';
 
 const Accompaniments = ({ onAddToCart }) => {
   const accompaniments = [

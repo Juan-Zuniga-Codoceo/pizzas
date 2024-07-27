@@ -76,3 +76,15 @@
 .cta-button:hover {
   background-color: #ff4500;
 }
+
+@media (max-width: 768px) {
+  .cta-buttons {
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .cta-button {
+    margin-bottom: 10px;
+  }
+}
