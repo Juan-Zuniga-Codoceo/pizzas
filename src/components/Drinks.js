@@ -1,5 +1,8 @@
 // src/components/Drinks.js
 import React, { useState } from 'react';
+import drink1 from '../assets/images/drink1.jpg';
+import drink2 from '../assets/images/drink2.jpg';
+import drink3 from '../assets/images/drink3.jpg';
 import '../styles/components/MenuItems.css';
 
 const Drinks = () => {
@@ -10,25 +13,25 @@ const Drinks = () => {
       id: 1,
       name: 'Coca Cola',
       description: 'Classic Coca Cola soft drink.',
-      image: require('../assets/images/drink1.jpg'),
+      image: drink1,
       rating: 4.5,
-      price: 1.99,
+      price: '$1.99',
     },
     {
       id: 2,
       name: 'Orange Juice',
       description: 'Freshly squeezed orange juice.',
-      image: require('../assets/images/drink2.jpg'),
+      image: drink2,
       rating: 4.8,
-      price: 2.99,
+      price: '$2.99',
     },
     {
       id: 3,
       name: 'Beer',
       description: 'Cold beer to refresh your day.',
-      image: require('../assets/images/drink3.jpg'),
+      image: drink3,
       rating: 4.7,
-      price: 3.99,
+      price: '$3.99',
     },
   ];
 
@@ -66,8 +69,8 @@ const Drinks = () => {
               {renderStars(item.rating)}
               <span className="rating-number">{item.rating}</span>
             </div>
-            <p className="price">${item.price.toFixed(2)}</p>
-            <button className="buy-button" onClick={() => addToCart(item)}>Add to Cart</button>
+            <p className="price">{item.price}</p>
+            <button className="buy-button" onClick={() => addToCart(item)}>Buy Now</button>
           </div>
         ))}
       </div>

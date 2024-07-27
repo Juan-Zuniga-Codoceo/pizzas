@@ -1,14 +1,19 @@
 // src/components/Accompaniments.js
-import React from 'react';
+import React, { useState } from 'react';
+import accompaniments1 from '../assets/images/accompaniments1.jpg';
+import accompaniments2 from '../assets/images/accompaniments2.jpg';
+import accompaniments3 from '../assets/images/accompaniments3.jpg';
 import '../styles/components/MenuItems.css';
 
 const Accompaniments = () => {
+  const [cart, setCart] = useState([]);
+
   const accompaniments = [
     {
       id: 1,
       name: 'Garlic Bread',
       description: 'Toasted bread with garlic and olive oil.',
-      image: require('../assets/images/accompaniments1.jpg'),
+      image: accompaniments1,
       rating: 4.6,
       price: '$5.99',
     },
@@ -16,7 +21,7 @@ const Accompaniments = () => {
       id: 2,
       name: 'Chicken Wings',
       description: 'Crispy chicken wings with a side of sauce.',
-      image: require('../assets/images/accompaniments2.jpg'),
+      image: accompaniments2,
       rating: 4.8,
       price: '$8.99',
     },
@@ -24,7 +29,7 @@ const Accompaniments = () => {
       id: 3,
       name: 'Salads',
       description: 'Fresh and healthy salads with a variety of toppings.',
-      image: require('../assets/images/accompaniments3.jpg'),
+      image: accompaniments3,
       rating: 4.5,
       price: '$6.99',
     },
@@ -46,6 +51,11 @@ const Accompaniments = () => {
     return stars;
   };
 
+  const addToCart = (item) => {
+    setCart([...cart, item]);
+    alert(`${item.name} added to cart`);
+  };
+
   return (
     <section className="menu-items-section">
       <h2>Accompaniments</h2>
@@ -60,7 +70,7 @@ const Accompaniments = () => {
               <span className="rating-number">{item.rating}</span>
             </div>
             <p className="price">{item.price}</p>
-            <button className="buy-button">Buy Now</button>
+            <button className="buy-button" onClick={() => addToCart(item)}>Buy Now</button>
           </div>
         ))}
       </div>
