@@ -33,13 +33,13 @@
 }
 
 .address-form input {
-  width: 100%;
-  padding: 10px;
+  width: calc(100% - 20px); /* Ajustar el ancho para que haya espacio alrededor */
+  padding: 8px; /* Reducir el padding */
   margin-bottom: 10px;
   border: 1px solid var(--color-gray);
   border-radius: 5px;
-  background-color: var(--color-dark-gray);
-  color: var(--color-white);
+  background-color: var(--color-white); /* Añadir fondo blanco */
+  color: var(--color-black); /* Cambiar color del texto a negro */
 }
 
 .cart-summary h3 {
@@ -76,6 +76,12 @@
 
 .cart-summary li button:hover {
   color: #ff4500; /* Cambiar color al pasar el mouse */
+}
+
+.total-amount {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  text-align: right; /* Alinear a la derecha */
 }
 
 .cta-button {
