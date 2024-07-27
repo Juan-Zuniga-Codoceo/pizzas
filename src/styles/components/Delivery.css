@@ -5,15 +5,24 @@
   color: var(--color-white);
   text-align: left;
   border-radius: 8px;
-  max-width: 1000px; /* Limitar el ancho máximo */
-  margin: 0 auto; /* Centrar la sección */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadir sombra */
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .delivery-content {
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 300px;
 }
 
 .address-form,
@@ -21,31 +30,43 @@
   background-color: var(--color-dark-gray);
   padding: 20px;
   border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--color-white);
   flex: 1;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Añadir sombra */
-  border: 2px solid var(--color-white); /* Añadir borde blanco */
+}
+
+.payment-icons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.payment-icons img {
+  width: 50px;
+  height: auto;
 }
 
 .address-form label,
 .cart-summary h3 {
   margin-bottom: 5px;
-  font-weight: bold; /* Añadir negrita a las etiquetas y títulos */
+  font-weight: bold;
 }
 
-.address-form input {
-  width: calc(100% - 20px); /* Ajustar el ancho para que haya espacio alrededor */
-  padding: 8px; /* Reducir el padding */
+.address-form input,
+.address-form select {
+  width: calc(100% - 20px);
+  padding: 8px;
   margin-bottom: 10px;
   border: 1px solid var(--color-gray);
   border-radius: 5px;
-  background-color: var(--color-white); /* Añadir fondo blanco */
-  color: var(--color-black); /* Cambiar color del texto a negro */
+  background-color: var(--color-white);
+  color: var(--color-black);
 }
 
 .cart-summary h3 {
   margin-bottom: 15px;
   color: var(--color-orange);
-  text-align: center; /* Centrar el título */
+  text-align: center;
 }
 
 .cart-summary ul {
@@ -59,7 +80,7 @@
   justify-content: space-between;
   margin-bottom: 10px;
   padding: 10px;
-  border-bottom: 1px solid var(--color-gray); /* Añadir borde inferior a los elementos */
+  border-bottom: 1px solid var(--color-gray);
 }
 
 .cart-summary li span {
@@ -71,22 +92,22 @@
   border: none;
   color: var(--color-orange);
   cursor: pointer;
-  transition: color 0.3s ease; /* Añadir transición al color */
+  transition: color 0.3s ease;
 }
 
 .cart-summary li button:hover {
-  color: #ff4500; /* Cambiar color al pasar el mouse */
+  color: #ff4500;
 }
 
 .total-amount {
   margin-top: 15px;
   font-size: 1.2rem;
-  text-align: right; /* Alinear a la derecha */
+  text-align: right;
 }
 
 .cta-button {
-  display: block; /* Hacer que el botón sea un bloque */
-  width: 50%; /* Ajustar el ancho del botón */
+  display: block;
+  width: 50%;
   padding: 15px 30px;
   font-size: 1.2rem;
   background-color: var(--color-orange);
@@ -94,14 +115,61 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Añadir transición al color y transformación */
+  transition: background-color 0.3s ease, transform 0.3s ease;
   margin-top: 10px;
   text-align: center;
   margin-left: auto;
-  margin-right: auto; /* Centrar el botón */
+  margin-right: auto;
 }
 
 .cta-button:hover {
   background-color: #ff4500;
-  transform: scale(1.05); /* Agrandar ligeramente el botón al pasar el mouse */
+  transform: scale(1.05);
+}
+
+.error-message {
+  color: var(--color-orange);
+  font-size: 0.9rem;
+  margin-top: -8px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+}
+
+@media (max-width: 768px) {
+  .delivery-content {
+    flex-direction: column;
+  }
+
+  .address-form,
+  .cart-summary {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .cta-button {
+    width: 100%;
+  }
 }
