@@ -2,6 +2,9 @@
 .featured-menu {
   padding: 20px;
   text-align: center;
+  width: 100%;
+  max-width: 1200px; /* Ajusta este valor según sea necesario */
+  margin: 0 auto;
 }
 
 .featured-menu h2 {
@@ -15,6 +18,9 @@
   justify-content: center; /* Centrar las cards */
   align-items: center;
   gap: 20px; /* Espacio entre las cards */
+  flex-wrap: wrap; /* Permitir que las cards se ajusten si la pantalla es pequeña */
+  -webkit-display: flex;
+  -ms-display: flex;
 }
 
 .menu-section {
@@ -28,10 +34,17 @@
   max-width: 300px; /* Limitar el ancho máximo de las cards */
   text-align: center;
   transition: transform 0.3s ease;
+  -webkit-transition: transform 0.3s ease; /* Safari */
+  -moz-transition: transform 0.3s ease; /* Firefox */
+  -o-transition: transform 0.3s ease; /* Opera */
+  margin-bottom: 20px; /* Asegurar que haya espacio abajo en caso de ajuste */
 }
 
 .menu-section:hover {
   transform: translateY(-5px);
+  -webkit-transform: translateY(-5px); /* Safari */
+  -moz-transform: translateY(-5px); /* Firefox */
+  -o-transform: translateY(-5px); /* Opera */
 }
 
 .menu-section img {
