@@ -31,6 +31,7 @@ const Header = () => {
           <li><Link to="/menu">Menu</Link></li>
           <li><Link to="/reservations">Reservations</Link></li>
           <li><Link to="/contact">Contact</Link></li>
+          <li><Link to="/delivery">Delivery</Link></li> {/* Nuevo enlace de delivery */}
           <li className="cart-icon">
             <FaShoppingCart size={24} onClick={handleCartClick} />
           </li>

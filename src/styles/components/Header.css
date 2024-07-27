@@ -6,12 +6,15 @@ header {
   width: 100%;
   z-index: 1000;
   top: 0; /* Fijar el menú en la parte superior */
+  display: flex;
+  justify-content: center; /* Centrar el contenido del header */
+  align-items: center;
 }
 
 nav ul {
   list-style-type: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: center; /* Centrar el menú */
   align-items: center;
   margin: 0;
   padding: 0;
@@ -24,7 +27,7 @@ nav ul li {
 nav ul li a {
   color: var(--color-white);
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1rem; /* Reducir tamaño de letra */
   transition: color 0.3s ease;
 }
 
@@ -33,7 +36,8 @@ nav ul li a:hover {
 }
 
 .cart-icon {
-  position: relative;
+  position: absolute; /* Posicionar el carrito de forma absoluta */
+  right: 60px; /* Mover el carrito más a la izquierda */
 }
 
 .cart-icon a {

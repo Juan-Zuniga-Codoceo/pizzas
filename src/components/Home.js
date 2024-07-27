@@ -2,8 +2,8 @@
 import React from 'react';
 import Hero from './Hero';
 import FeaturedMenu from './FeaturedMenu';
-import AboutSection from './AboutSection';
-import TestimonialsSection from './TestimonialsSection';
+import Gallery from './Gallery';
+import RestaurantHistory from './RestaurantHistory';
 import '../styles/components/Home.css';
 
 const Home = () => {
@@ -26,7 +26,23 @@ const Home = () => {
         <div className="section-separator-line"></div>
       </div>
       <div className="section section-dark">
-        <AboutSection />
+        <div className="cta-section">
+          <h2>Reserva una Mesa o Pide a Domicilio</h2>
+          <button className="cta-button" onClick={() => window.location.href='/reservations'}>
+            Reserva Ahora
+          </button>
+          <button className="cta-button" onClick={() => window.location.href='/delivery'}>
+            Ordena Delivery
+          </button>
+        </div>
+      </div>
+      <div className="section-separator">
+        <div className="section-separator-line"></div>
+        <div className="section-separator-icon camera-icon"></div>
+        <div className="section-separator-line"></div>
+      </div>
+      <div className="section section-dark">
+        <Gallery />
       </div>
       <div className="section-separator">
         <div className="section-separator-line"></div>
@@ -34,7 +50,7 @@ const Home = () => {
         <div className="section-separator-line"></div>
       </div>
       <div className="section section-dark">
-        <TestimonialsSection />
+        <RestaurantHistory />
       </div>
     </main>
   );

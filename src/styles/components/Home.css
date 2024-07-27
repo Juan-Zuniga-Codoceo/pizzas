@@ -1,49 +1,70 @@
 /* src/styles/components/Home.css */
 .section {
-    padding: 30px 20px; /* Reducir el padding */
-    text-align: center;
-  }
-  
-  .section-dark {
-    background-color: var(--color-black);
-    color: var(--color-white);
-  }
-  
-  .section-light {
-    background-color: var(--color-black);
-    color: var(--color-white);
-  }
-  
-  .section-separator {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0; /* Reducir el margen */
-  }
-  
-  .section-separator-line {
-    height: 1px;
-    background-color: var(--color-white);
-    flex: 1;
-  }
-  
-  .section-separator-icon {
-    width: 50px;
-    height: 50px;
-    margin: 0 10px; /* Reducir el margen */
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-  
-  .menu-icon {
-    background-image: url('../../assets/images/menu.png');
-  }
-  
-  .utensils-icon {
-    background-image: url('../../assets/images/utensils.png');
-  }
-  
-  .pizza-icon {
-    background-image: url('../../assets/images/pizza-ico.png');
-  }
-  
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.section-dark {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.section-separator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.section-separator-line {
+  height: 1px;
+  background-color: var(--color-white);
+  flex: 1;
+}
+
+.section-separator-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.menu-icon {
+  background-image: url('../../assets/images/menu.png');
+}
+
+.utensils-icon {
+  background-image: url('../../assets/images/utensils.png');
+}
+
+.pizza-icon {
+  background-image: url('../../assets/images/pizza-ico.png');
+}
+
+.camera-icon {
+  background-image: url('../../assets/images/camara.png');
+}
+
+.cta-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.cta-button {
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #ff4500;
+}
