@@ -1,7 +1,9 @@
 // src/components/Delivery.js
 import React, { useState } from 'react';
 import '../styles/components/Delivery.css';
-import CartPopup from './CartPopup';
+import creditCard from '../assets/images/credit-card.png';
+import debitCard from '../assets/images/debit-card.png';
+import cash from '../assets/images/cash.png';
 
 const Delivery = ({ cartItems, handleRemoveFromCart, handleSubmitOrder }) => {
   const [name, setName] = useState('');
@@ -34,6 +36,7 @@ const Delivery = ({ cartItems, handleRemoveFromCart, handleSubmitOrder }) => {
   const handleConfirmOrder = () => {
     setIsPopupOpen(false);
     handleSubmitOrder();
+    alert('Pedido confirmado');
   };
 
   return (
@@ -88,9 +91,9 @@ const Delivery = ({ cartItems, handleRemoveFromCart, handleSubmitOrder }) => {
             {formErrors.paymentMethod && <span className="error-message">{formErrors.paymentMethod}</span>}
           </form>
           <div className="payment-icons">
-            <img src={require('../assets/images/credit-card.png')} alt="Credit Card" />
-            <img src={require('../assets/images/debit-card.png')} alt="Debit Card" />
-            <img src={require('../assets/images/cash.png')} alt="Cash" />
+            <img src={creditCard} alt="Credit Card" />
+            <img src={debitCard} alt="Debit Card" />
+            <img src={cash} alt="Cash" />
           </div>
         </div>
         <div className="cart-summary">
