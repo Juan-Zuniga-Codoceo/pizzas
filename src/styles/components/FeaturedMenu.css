@@ -1,16 +1,49 @@
 /* src/styles/components/FeaturedMenu.css */
 .featured-menu {
+  padding: 20px;
   text-align: center;
 }
 
 .featured-menu h2 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-  color: var(--color-white);
+  margin-bottom: 20px;
+  color: var(--color-orange);
 }
 
 .menu-sections {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  flex-direction: row; /* Asegurar que las cards estén en una fila */
+  justify-content: center; /* Centrar las cards */
+  align-items: center;
+  gap: 20px; /* Espacio entre las cards */
+}
+
+.menu-section {
+  background-color: var(--color-dark-gray);
+  color: var(--color-white);
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px; /* Limitar el ancho máximo de las cards */
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.menu-section:hover {
+  transform: translateY(-5px);
+}
+
+.menu-section img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.menu-section h3 {
+  margin: 15px 0 10px 0;
+  color: var(--color-orange);
+}
+
+.menu-section p {
+  margin: 0;
 }
