@@ -38,7 +38,7 @@ function App() {
     setAlertVisible(true);
     setTimeout(() => {
       setAlertVisible(false);
-    }, 3000); // El mensaje desaparecerá después de 3 segundos
+    }, 3000);
   };
 
   return (
@@ -60,7 +60,7 @@ function App() {
             <Route path="/reservations" element={<Reservations />} />
             <Route path="/orders" element={<Orders />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/delivery" element={<Delivery />} />
+            <Route path="/delivery" element={<Delivery cartItems={cartItems} handleRemoveFromCart={handleRemoveFromCart} handleSubmitOrder={handleSubmitOrder} />} />
           </Routes>
         </main>
         <Footer />
