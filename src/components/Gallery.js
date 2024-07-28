@@ -14,16 +14,16 @@ const Gallery = () => {
       <h2>Nuestra Galería</h2>
       <Carousel showThumbs={false} autoPlay={true} infiniteLoop={true}>
         <div>
-          <img src={gallery1} alt="Gallery Image 1" />
+          <img src={gallery1} alt="Dish 1" />
         </div>
         <div>
-          <img src={gallery2} alt="Gallery Image 2" />
+          <img src={gallery2} alt="Dish 2" />
         </div>
         <div>
-          <img src={gallery3} alt="Gallery Image 3" />
+          <img src={gallery3} alt="Dish 3" />
         </div>
         <div>
-          <img src={gallery4} alt="Gallery Image 4" />
+          <img src={gallery4} alt="Dish 4" />
         </div>
       </Carousel>
     </div>
