@@ -13,7 +13,7 @@ const Hero = () => {
         </p>
         <button
           className="hero-button"
-          onClick={() => (window.location.href = "/menu")}
+          onClick={() => (window.location.href = "/Menu")}
         >
           Ordena Ahora
         </button>
